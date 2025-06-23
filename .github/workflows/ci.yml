@@ -21,6 +21,9 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
+      - name: Remove Maven toolchains.xml
+        run: rm -f ~/.m2/toolchains.xml || true
+
       - name: Show Java version (debug)
         run: |
           echo "JAVA_HOME=$JAVA_HOME"
